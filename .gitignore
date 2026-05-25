@@ -1,0 +1,19 @@
+# ── Environment / Secrets ──
+.env
+*.env.local
+.env.example
+
+# ── OS files ──
+.DS_Store
+Thumbs.db
+
+# ── IDE / Editor ──
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Compiled binaries ──
+*.exe
+*.test
