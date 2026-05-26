@@ -13,7 +13,18 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.claude/
+AGENTS.md
+CLAUDE.md
+LICENSE
 
 # ── Compiled binaries ──
 *.exe
 *.test
+backend/befit-server
+
+# ── Node / Expo ──
+node_modules/
+.expo/
+dist/
+*.tsbuildinfo
