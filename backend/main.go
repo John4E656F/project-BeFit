@@ -11,11 +11,21 @@ import (
 	"github.com/John4E656F/project-BeFit/backend/database"
 	"github.com/John4E656F/project-BeFit/backend/handlers"
 	"github.com/John4E656F/project-BeFit/backend/middleware"
+	"github.com/joho/godotenv"
 )
 
 func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	log.Println("🏋️ project-BeFit backend starting...")
+
+	// Load .env file — check current dir, then backend/ subdir
+	envErr := godotenv.Load()
+	if envErr != nil {
+		envErr = godotenv.Load("backend/.env")
+	}
+	if envErr != nil {
+		log.Println("⚠️ No .env file found, using environment variables")
+	}
 
 	// Load config
 	cfg := config.Load()
